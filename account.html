@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>CarSell Team</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- icon file link  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <a href="index.html.#hero"><img src="assets/img/imgbin_sports-car-logo-png.png" alt="" class="img-fluid"></a>
+              </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="index.html.#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="index.html.#about">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="index.html.#services">Services</a></li>
+                    <li><a class="nav-link scrollto " href="index.html.#faq">FAQ</a></li>
+                    <li><a class="nav-link scrollto" href="index.html.#team">Team</a></li>
+                    <li class="dropdown"><a href="#"><span>Models</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="proton.html">Proton</a></li>
+                            <li><a href="perodua.html">Perodua</a></li>
+                            <li><a href="honda.html">Honda</a></li>
+                            <li><a href="audi.html">Audi</a></li>
+                            <li><a href="toyota.html">Toyota</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <div id="login-btn">
+                        <button class="btn" onclick="window.location.href='account.html';"><i
+                                class='bx bxs-user'></i></button>
+                    </div>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+
+        <!-- account page -->
+        <section class="account">
+            <div class="container">
+                <input type="checkbox" id="flip">
+                <div class="cover">
+                    <div class="front">
+                        <img src="assets/img/image/blackcar.jpg" alt="">
+                    </div>
+                    <div class="back">
+                        <img src="assets/img/image/manycars.jpg" alt="">
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="form-content">
+                        <div class="login-form" onsubmit="writelocaltoragelogin()">
+                            <div class="title">Login</div>
+                            <form method="POST" action="index.html">
+                                <div class="input-boxes">
+                                    <div class="input-box">
+                                        <i class='bx bxs-user-circle'></i>
+                                        <input type="text" placeholder="Enter your username" required id="loginusername">
+                                    </div>
+                                    <div class="input-box">
+                                        <i class='bx bxs-lock'></i>
+                                        <input type="password" placeholder="Enter your password" required id="loginpassword">
+                                    </div>
+                                    <div class="text"><a href="#">Forgot password?</a></div>
+                                    <div class="button input-box">
+                                        <input type="submit" value="Sumbit">
+                                    </div>
+                                    <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup
+                                            now</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="signup-form">
+                            <div class="title">Signup</div>
+                            <form class="signup_form_input" onsubmit="writelocalstoragesignup();" method="POST" action="index.html"> 
+                                <div class="input-boxes">
+                                    <div class="input-box">
+                                        <i class='bx bxs-user-circle'></i>
+                                        <input type="text" placeholder="Enter your username" id="username" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <i class='bx bxs-envelope'></i>
+                                        <input type="text" placeholder="Enter your email"  id="email" required>
+                                    </div>
+                                    <div class="input-box">
+                                        <i class='bx bxs-lock'></i>
+                                        <input type="password" placeholder="Enter your password"  id="password" required>
+                                    </div>
+                                    <div class="button input-box">
+                                        <input type="submit" value="Sumbit">
+                                    </div>
+                                    <div class="text sign-up-text">Already have an account? <label for="flip">Login
+                                            now</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+<script>
+    function writesessionstoragelogin(){
+  var loginusername = document.getElementById("loginusername").value;
+  localStorage.setItem('loginusername',loginusername);  
+}
+
+function writelocalstoragesignup(){
+  var username = document.getElementById("username").value;
+  localStorage.setItem('username',username);  
+  var email = document.getElementById("email").value;
+  localStorage.setItem('email',email);  
+  var password = document.getElementById("password").value;
+ localStorage.setItem('password',password);  
+
+}
+</script>
+</body>
+
+</html>

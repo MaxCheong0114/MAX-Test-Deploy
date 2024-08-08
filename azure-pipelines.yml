@@ -7,7 +7,7 @@ trigger:
 - none
 
 schedules:
-- cron: "20 1 * * *"  # Runs daily at 1:20 AM UTC
+- cron: "25 1 * * *"  # Runs daily at 1:20 AM UTC
   displayName: "Daily at 1:20 AM UTC"
   branches:
     include:
@@ -27,9 +27,16 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: AzureCLI@2
+
+- task: AzurePowerShell@5
   inputs:
     azureSubscription: 'Visual Studio Enterprise Subscription – MPN(27ef14ec-98ca-45d4-96b0-10910b50f9f4)'
-    scriptType: 'ps'
-    scriptLocation: 'scriptPath'
-    scriptPath: 'APS-ScaleUP.ps1'
+    ScriptType: 'InlineScript'
+    Inline: |
+      $subscription = "Visual Studio Enterprise Subscription – MPN"
+      $resourceGroup = "Max_Testing_ASP"
+      $appServicePlan = "MAX-ASP-SEA-TestLab-01"
+      $sku = "PIV3" 
+      
+      az appservice plan update -name $appServicePlan -resource-group $resourceGroup -subscription $subscription -sku $sku
+      az webapp restart -name $appService -resource $resourceGroup -group $resourceGroup -subscription $subscription

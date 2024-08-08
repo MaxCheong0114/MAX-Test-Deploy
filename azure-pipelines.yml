@@ -28,15 +28,9 @@ steps:
   displayName: 'Run a multi-line script'
 
 
-- task: AzurePowerShell@5
+- task: AzureCLI@2
   inputs:
     azureSubscription: 'Visual Studio Enterprise Subscription – MPN(27ef14ec-98ca-45d4-96b0-10910b50f9f4)'
-    ScriptType: 'InlineScript'
-    Inline: |
-      $subscription = "Visual Studio Enterprise Subscription – MPN"
-      $resourceGroup = "Max_Testing_ASP"
-      $appServicePlan = "MAX-ASP-SEA-TestLab-01"
-      $sku = "PIV3" 
-      
-      az appservice plan update -name $appServicePlan -resource-group $resourceGroup -subscription $subscription -sku $sku
-      az webapp restart -name $appService -resource $resourceGroup -group $resourceGroup -subscription $subscription
+    scriptType: 'ps'
+    scriptLocation: 'scriptPath'
+    scriptPath: 'ASP-ScaleUP.ps1'

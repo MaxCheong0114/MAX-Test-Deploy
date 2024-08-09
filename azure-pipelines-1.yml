@@ -1,0 +1,36 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+schedules:
+- cron: "45 6 * * *"  # Runs daily at 6:40 AM UTC
+  displayName: "Daily at 6:40 AM UTC"
+  branches:
+    include:
+    - main  # Trigger on the 'main' branch
+  always: true  # Always trigger the build even if there are no changes
+
+
+pool:
+  vmImage: windows-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise Subscription – MPN(27ef14ec-98ca-45d4-96b0-10910b50f9f4)'
+    scriptType: 'ps'
+    scriptLocation: 'scriptPath'
+    scriptPath: 'ASP-ScaleDown.ps1'

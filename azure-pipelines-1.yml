@@ -7,8 +7,8 @@ trigger:
 - none
 
 schedules:
-- cron: "15 7 * * *"  # Runs daily at 7:15 AM UTC
-  displayName: "Daily at 7:15 AM UTC"
+- cron: "30 10 * * *"  # Runs daily at 10:30 AM UTC
+  displayName: "Daily at 10:30 AM UTC"
   branches:
     include:
     - main  # Trigger on the 'main' branch
